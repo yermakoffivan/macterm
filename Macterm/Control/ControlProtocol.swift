@@ -108,8 +108,6 @@ struct ControlArgs: Codable, Equatable {
     var title: String?
     /// Reset custom title back to automatic default (`tab.rename`).
     var reset: Bool?
-    /// Literal text to write to a pane's terminal without submitting (`pane.write`).
-    var text: String?
 
     init(
         project: String? = nil,
@@ -132,8 +130,7 @@ struct ControlArgs: Codable, Equatable {
         dest: String? = nil,
         slot: Int? = nil,
         title: String? = nil,
-        reset: Bool? = nil,
-        text: String? = nil
+        reset: Bool? = nil
     ) {
         self.project = project
         self.tab = tab
@@ -156,7 +153,6 @@ struct ControlArgs: Codable, Equatable {
         self.slot = slot
         self.title = title
         self.reset = reset
-        self.text = text
     }
 }
 
